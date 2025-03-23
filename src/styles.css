@@ -1,0 +1,209 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74abe2, #5563de);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.App {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 30px 40px;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Controls Container */
+.controls-container {
+  margin-bottom: 30px;
+}
+
+/* Form Group for range slider */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  border-radius: 3px;
+  background: #ddd;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.slider:hover,
+.slider:focus {
+  background: #ccc;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5563de;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #4453c7;
+}
+
+/* Checkbox Group */
+.checkbox-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  user-select: none;
+}
+
+/* Hide the default checkbox */
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Checkmark after element for the tick */
+.checkmark:after {
+  content: "✓";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Hover state for custom checkbox */
+.checkbox-label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When checkbox is checked, add a blue background and show the checkmark */
+.checkbox-label input:checked ~ .checkmark {
+  background-color: #5563de;
+}
+
+.checkbox-label input:checked ~ .checkmark:after {
+  opacity: 1;
+}
+
+/* Generate Button */
+.generate-btn {
+  background-color: #5563de;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.generate-btn:hover:not(:disabled) {
+  background-color: #4453c7;
+}
+
+.generate-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Password Container */
+.password-container {
+  margin-top: 20px;
+}
+
+/* Loading State */
+.loading {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Password Display */
+.password-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.password {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  word-break: break-all;
+}
+
+/* Copy Button */
+.copy-btn {
+  background-color: #eee;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.copy-btn:hover {
+  background-color: #ddd;
+}
